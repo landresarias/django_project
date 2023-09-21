@@ -1,0 +1,42 @@
+
+{% extends 'components/layout.html' %}
+
+{% block content %}
+    <main>
+        <h1 class="EpisDet">{{showName}} <h5>Season: {{SeasonNum}} | Episode: {{EpisNum}} | 
+            Air Date: {{AirDate}} | Voted: {{Voted}}</h5> </h1>
+        <h3>{{EpisName}}</h3>
+        <p>{{Overview}}</p> 
+        <div class="detDiv">
+            {%for Img,WorkerName,Job,GuestName,GuestChar,Age,popularity,ProfPath in Production%}
+                <div class="detail">
+                    <a class="subDetail" href="" title="see episodes details">
+                        <img class="detImage" src="https://image.tmdb.org/t/p/original{{Img}}" alt="Profile Image"> 
+                        <h1 class="subDetail">{{WorkerName}}</h1>
+                        <h1 class="subDetail">{{Job}}</h1> 
+                    </a>
+                </div>
+                <div class="detail">
+                    <a class="subDetail" href="" title="see episodes details">
+                        <img class="detImage" src="https://image.tmdb.org/t/p/original{{ProfPath}}" alt="Profile Guest"> 
+                        <h1 class="subDetail">-- Guest Stars -- </h1>
+                        <h1 class="subDetail">{{GuestName}}</h1>
+                        <h1 class="subDetail">As: {{GuestChar}}</h1> 
+                        <h1 class="subDetail">Popularity: {{popularity}}</h1> 
+                    </a>
+                </div>
+            {%endfor%}
+        </div>
+    </main>
+{% endblock %}
+
+
+
+<!--https://image.tmdb.org/t/p/original/yUwAL9wOJoS9caz9GusyHsrad8J.jpg>-->
+
+{% for SeasonNum,SeasonName,Poster in seasonDetails %}
+            <a href="/episodes/{{SeasonNum}}" title="see episodes">
+                <img class="seasonImg" src="https://image.tmdb.org/t/p/original{{Poster}}" alt="poster">
+                <h1 id="seasName">{{SeasonName}}</h1>
+            </a>
+        {% endfor %}

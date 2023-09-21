@@ -1,0 +1,209 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+*, html {
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    background: #ddd;
+    margin: 0;
+    padding: 0;
+    font-size: 1.4rem;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+nav {
+    width: 100%;
+    height: 200px;
+    background: url('../images/Nav.png');
+    background-size: cover;
+    background-position: center;
+    padding: 5px 50px;
+    border-bottom: 2px solid #fff;
+}
+    #logo {
+        width: 120px;
+    }
+    a {
+        text-decoration: none;
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 15px 13px;
+        color: #3794ce;
+        text-shadow: 2px 2px 5px #222;
+        display: inline-block;
+    }
+    a:hover {
+        color: #f00;
+    }
+
+/*---Styling the index.html page---*/
+main{
+    width: 100%;
+    height: auto;
+    background: radial-gradient(rgba(15, 14, 22, 0.3), #0f049d),
+        url('https://image.tmdb.org/t/p/original/xXRsKNJHTOGrs5wfYAxkbM2RiyT.jpg');
+    background-size: cover;
+    background-position-y: -0px;
+    padding: 20px 100px;
+    
+    color: antiquewhite;
+    border-bottom: 2px solid #fff;
+}
+#iframe{
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 455px;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    float: left;
+    
+}
+#seasonItems{
+    position: absolute;
+    z-index: 1;
+    margin: 50px 30px;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #fff;
+    -webkit-text-stroke: .5px black;
+}
+.blue {
+    color: #88b9ff;
+}
+.seasonImg{
+    width: 180px;
+    margin: 50px 40px;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    float: left;
+}
+#seasName{
+    color: #3794ce;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/*---Styling the episodes.html page---*/
+#episodes{
+    background: radial-gradient(rgba(15, 14, 22, 0.3), #060149),
+        url('https://image.tmdb.org/t/p/original/sIq4SFloM0JSeRNAQVqb5g5zAng.jpg');
+}
+.title{
+    text-align: center;
+    text-shadow: 2px 2px #b5d7ea;
+    color: #92492c;
+}
+#seasonNum{
+    margin-left: -30px;
+    color: #3794ce;
+    text-shadow: 2px 2px #b5d7ea;
+}
+.epDiv{
+    width: 90%;
+    height: 270px;
+    background: #000;
+    margin: 30px auto;
+    padding: 10px 20px;
+    border: 4px solid #333;
+    border-radius: 12px;
+    box-shadow: 2px 3px 5px #c6eef0;
+}
+    .epDiv:nth-child(even){
+        background: rgb(53, 53, 52);
+    }
+.rightDiv{
+    width: 30%;
+    height: 250px;
+    padding: 0px;
+    float:right;
+}
+.epImage{
+    width: 100%;
+    height: auto;
+    margin: 15px auto;
+    border: 4px solid #444;
+    border-radius: 12px;
+    box-shadow: 2px 3px 5px #c6eef0;
+}
+.leftDiv{
+    width: 70%;
+    height: 250px;
+    margin-top: -30px;
+    padding: 15px 50px;
+    font-size: 1rem;
+    float: left;
+}
+.epDetails{
+    background: rgba(7, 114, 133, 0.4);
+    padding: 8px 20px;
+    color: #3794ce;
+    font-size: 1rem;
+    border: 1px solid #222;
+    border-radius: 8px;
+}
+.fullDetail{
+    background: rgba(7, 114, 133, 0.4);
+    padding: 0px 20px;
+    color: #3794ce;
+    font-size: 1rem;
+    border: 1px solid #222;
+    border-radius: 8px;
+    cursor: pointer;
+    float: right;
+}
+
+
+/*---Styling the details.html page---*/
+.detDiv{
+    width: 100%;
+    background: rgba(182, 207, 212,.4);
+    margin: 30p 0px;
+    padding: 10px 50px;
+    border: 4px solid #333;
+    border-radius: 12px;
+    box-shadow: 2px 3px 5px #c6eef0;
+    overflow: auto;
+}
+.detail{
+    width: 100%;
+    height: 400px;
+    max-width: 220px;
+    min-height: 480px;
+    background: rgba(114, 1, 1,.5);
+    margin: 25px 25px;
+    border-radius: 12px;
+    box-shadow: 2px 3px 5px #c6eef0;
+    float: left;
+}
+.subDetail {
+    color: #e9e7fe;
+    font-size: 1rem;
+}
+.detImage{
+    width: 100%; 
+}
+
+
+
+footer{
+    width: 100%;
+    height: 100px;
+    background: #777;
+    color: #111;
+    text-align: center;
+    font-size: 1.2rem;
+    padding-top: 25px;
+}
+.imgFooter{
+    width: 5%;
+    height: auto;
+    background: #777;
+    padding:0 20px;
+    float: right;
+}
+
+

@@ -1,0 +1,53 @@
+
+{% extends 'components/layout.html' %}
+
+{% block content %}
+    <main id="index">
+        <div id="seasonItems">
+            <span>Tv Show:  
+                <span class="blue">{{TvName}}</span>
+            </span><br><br>
+            <span id="tagline">"{{TagLine}}"</span><br><br>
+            
+            {%for genId, genName in genresDetail%}
+                <span>Rated:  
+                    <span class="blue">{{genId}}</span>
+                </span><br><br> 
+                <span>Category:  
+                    <span class="blue">{{genName}}</span>
+                </span><br><br>
+            {%endfor%}
+            <span>Voted:  
+                <span class="blue">{{Voted}}</span>
+            </span><br><br>
+            <span>Total seasons:  
+                <span class="blue">{{SeasNum}}</span>
+            </span><br><br>
+            <span>Total episodes:  
+                <span class="blue">{{EpisNum}}</span>
+            </span>
+        </div>
+        
+        <iframe id="iframe" src="https://www.youtube.com/embed/d0PwXY9-Jb8?start=87" 
+        title="YouTube video player" frameborder="0" allowfullscreen>
+        </iframe>
+        <br><br>
+        <div>
+            <h1 class="title">List of Seasons</h1>
+        </div>
+        {% for SeasonNum,SeasonName,Poster in seasonDetails %}
+            <a href="/episodes/{{SeasonNum}}" title="see episodes">
+                <img class="seasonImg" src="https://image.tmdb.org/t/p/original{{Poster}}" alt="poster">
+                <h1 id="seasName">{{SeasonName}}</h1>
+            </a>
+        {% endfor %}
+    </main>
+{% endblock %}
+
+
+
+
+
+{%<!--<iframe id="iframe" src="https://www.youtube.com/embed/{{MyVideo}}
+            ?rel=0&playlist={{MyVideo}}" frameborder="0" allowfullscreen>
+        </iframe>-->%}

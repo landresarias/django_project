@@ -1,0 +1,26 @@
+
+{% extends 'components/layout.html' %}
+
+{% block content %}
+    <main id="episodes">
+        <h1 class="title" >List of Episodes by Season</h1>
+        <h1 id="seasonNum">Season {{SeasonNumb}}</h1>
+        {%for Name,AirDate,EpisNum,Poster,Overview,Id,VotedEpis in Episodes%}
+            <div class="epDiv">
+                <div class="rightDiv">
+                    <img class="epImage" src="https://image.tmdb.org/t/p/original{{Poster}}" alt="poster">
+                </div>
+                <div class="leftDiv">
+                    <h1>{{Name}}</h1>
+                    <span class="epDetails">episode: {{EpisNum}} | {{AirDate}} | Voted: {{VotedEpis}}</span> 
+                    <p>{{Overview|truncatechars:250}}
+                        <a class="fullDetail" href="/details/{{SeasonNumb}}/{{EpisNum}}" 
+                            title="view details">view details &rightarrow;</a>
+                    </p>
+                </div>
+            </div>
+        {%endfor%}
+    </main>
+{% endblock %}
+
+
